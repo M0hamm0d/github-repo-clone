@@ -33,8 +33,10 @@ createRepo.addEventListener("click", () => {
   repoDropdown.classList.toggle("active");
 });
 
-console.log(window.location.origin);
-
+console.log(window.location.origin === "http://127.0.0.1:5500");
+window.location.origin === "http://127.0.0.1:5500"
+  ? console.log("I am currently running offline")
+  : console.log("I am currently running online");
 async function repoEndPoint() {
   // if (window.location.href === "https://github-repo-clone-chi.vercel.app/") {
   //   window.location.href = "http://127.0.0.1:5500/index.html";
