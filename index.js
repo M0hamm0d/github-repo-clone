@@ -36,9 +36,9 @@ createRepo.addEventListener("click", () => {
 console.log(window.location.origin);
 
 async function repoEndPoint() {
-  if (window.location.href === "https://github-repo-clone-chi.vercel.app/") {
-    window.location.href = "http://127.0.0.1:5500/index.html";
-  }
+  // if (window.location.href === "https://github-repo-clone-chi.vercel.app/") {
+  //   window.location.href = "http://127.0.0.1:5500/index.html";
+  // }
   let response = await fetch(url, {
     method: "GET",
     headers: {
