@@ -348,6 +348,10 @@ header img {
   flex: 1;
   border-radius: 6px;
 }
+.type-sec {
+  display: flex;
+  gap: 0.5rem;
+}
 .type,
 .lang-filter,
 .sort,
@@ -369,7 +373,7 @@ header img {
 .sort:hover {
   background-color: #eff2f5;
 }
-.new {
+.search-filter-container .new {
   background-color: green;
   color: white;
 }
@@ -632,8 +636,7 @@ footer {
   }
   .body-container,
   .search-filter-container,
-  footer,
-  .footer-nav ul {
+  footer {
     flex-direction: column;
   }
   .body-container {
@@ -673,9 +676,35 @@ footer {
   }
   .new {
     justify-content: center;
+    background-color: green;
+    color: white;
   }
   .type-sec {
     display: flex;
     gap: 0.5rem;
+  }
+  .footer-nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  .footer-nav ul li {
+    line-height: 1.5;
+    margin: 0 8px;
+  }
+  .copyright {
+    display: none;
+  }
+  .copyright.mobile {
+    display: flex;
+    justify-content: center;
+  }
+  .navigations {
+    justify-content: flex-start;
+  }
+  .description {
+    line-height: 1.5;
   }
 }
