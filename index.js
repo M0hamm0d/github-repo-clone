@@ -16,7 +16,12 @@ const lang = document.querySelector(".lang-filter");
 const langDropdown = document.querySelector(".language-dropdown");
 const type = document.querySelector(".type");
 const typeDropdown = document.querySelector(".type-dropdown");
+const listMore = document.querySelector(".list-more");
+const listMoreDropdown = document.querySelector(".list-more-dropdown");
 
+listMore.addEventListener("click", function () {
+  listMoreDropdown.classList.toggle("active");
+});
 let url =
   "https://api.github.com/users/M0hamm0d/repos?sort=created&direction=desc";
 
@@ -41,7 +46,7 @@ async function repoEndPoint() {
     method: "GET",
     headers: {
       Authorization: `Bearer ${
-        window.location.origin === "http://127.0.0.1:5500" ? env : env
+        window.location.origin === "http://127.0.0.1:5500" ? env.API_KEY : env
       }`,
     },
   });

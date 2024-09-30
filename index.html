@@ -27,6 +27,9 @@
             </p>
           </div>
           <div class="actions">
+            <button class="mobile-search">
+              <img src="asset/images/svg/search.svg" alt="" />
+            </button>
             <button class="dropdowns create-repo">
               <img src="asset/images/svg/add.svg" alt="" />
               <img
@@ -123,11 +126,44 @@
             <p>Stars</p>
           </div>
         </div>
+        <div class="list-more">
+          <img src="asset/images/svg/list-more.svg" alt="" />
+          <div class="list-more-dropdown">
+            <div class="projects">
+              <div class="">
+                <img src="asset/images/svg/project.svg" alt="" />
+                <p>Projects</p>
+              </div>
+            </div>
+            <div class="packages">
+              <div class="">
+                <img src="asset/images/svg/packages.svg" alt="" />
+                <p>Packages</p>
+              </div>
+            </div>
+            <div class="star">
+              <div class="">
+                <img src="asset/images/svg/star.svg" alt="" />
+                <p>Stars</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main class="main">
       <div class="body-container">
         <div class="side-nav">
+          <div class="mobile-profile-sec">
+            <div class="mobile-profile">
+              <img
+                src="https://avatars.githubusercontent.com/u/150529925?v=4"
+                alt=""
+                class="profile-sec"
+              />
+            </div>
+            <div class="name mobile"></div>
+          </div>
           <div class="profile">
             <img
               src="https://avatars.githubusercontent.com/u/150529925?v=4"
@@ -136,6 +172,10 @@
             />
           </div>
           <p class="name"></p>
+          <button class="set-status mobile">
+            <img src="asset/images/svg/emoji.svg" alt="" />
+            <p>Set status</p>
+          </button>
           <button class="edit-profile">Edit profile</button>
           <div class="achievements">
             <h4>Achievements</h4>
@@ -150,113 +190,119 @@
           </div>
         </div>
         <div class="body">
+          <button class="new mobile">
+            <img src="asset/images/svg/new.svg" alt="" />
+            New
+          </button>
           <div class="search-filter-container">
             <div class="search-input">
               <input type="text" placeholder="Find a repository..." />
             </div>
-            <button class="type">
-              Type
-              <img src="asset/images/svg/dropdown.svg" alt="" />
-              <div class="type-dropdown">
-                <div class="select-title">
-                  <h4>Select type</h4>
-                  <img src="asset/images/svg/cancel.svg" alt="" />
+            <div class="type-sec">
+              <button class="type">
+                Type
+                <img src="asset/images/svg/dropdown.svg" alt="" />
+                <div class="type-dropdown">
+                  <div class="select-title">
+                    <h4>Select type</h4>
+                    <img src="asset/images/svg/cancel.svg" alt="" />
+                  </div>
+                  <ul>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>All</p>
+                    </li>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>Public</p>
+                    </li>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>Private</p>
+                    </li>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>Sources</p>
+                    </li>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>Forks</p>
+                    </li>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>Archived</p>
+                    </li>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>Can be sponsored</p>
+                    </li>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>Mirrors</p>
+                    </li>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>Templates</p>
+                    </li>
+                  </ul>
                 </div>
-                <ul>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>All</p>
-                  </li>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>Public</p>
-                  </li>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>Private</p>
-                  </li>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>Sources</p>
-                  </li>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>Forks</p>
-                  </li>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>Archived</p>
-                  </li>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>Can be sponsored</p>
-                  </li>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>Mirrors</p>
-                  </li>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>Templates</p>
-                  </li>
-                </ul>
-              </div>
-            </button>
-            <button class="lang-filter">
-              Language
-              <img src="asset/images/svg/dropdown.svg" alt="" />
-              <div class="language-dropdown">
-                <div class="select-title">
-                  <h4>Select language</h4>
-                  <img src="asset/images/svg/cancel.svg" alt="" />
+              </button>
+              <button class="lang-filter">
+                Language
+                <img src="asset/images/svg/dropdown.svg" alt="" />
+                <div class="language-dropdown">
+                  <div class="select-title">
+                    <h4>Select language</h4>
+                    <img src="asset/images/svg/cancel.svg" alt="" />
+                  </div>
+                  <ul>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>All</p>
+                    </li>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>HTML</p>
+                    </li>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>JavaScript</p>
+                    </li>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>CSS</p>
+                    </li>
+                  </ul>
                 </div>
-                <ul>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>All</p>
-                  </li>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>HTML</p>
-                  </li>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>JavaScript</p>
-                  </li>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>CSS</p>
-                  </li>
-                </ul>
-              </div>
-            </button>
-            <button class="sort">
-              Sort<img src="asset/images/svg/dropdown.svg" alt="" />
-              <div class="sort-dropdown">
-                <div class="select-title">
-                  <h4>Select order</h4>
-                  <img src="asset/images/svg/cancel.svg" alt="" />
+              </button>
+              <button class="sort">
+                Sort<img src="asset/images/svg/dropdown.svg" alt="" />
+                <div class="sort-dropdown">
+                  <div class="select-title">
+                    <h4>Select order</h4>
+                    <img src="asset/images/svg/cancel.svg" alt="" />
+                  </div>
+                  <ul>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>Last updated</p>
+                    </li>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>Name</p>
+                    </li>
+                    <li>
+                      <img src="asset/images/svg/mark.svg" alt="" />
+                      <p>Stars</p>
+                    </li>
+                  </ul>
                 </div>
-                <ul>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>Last updated</p>
-                  </li>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>Name</p>
-                  </li>
-                  <li>
-                    <img src="asset/images/svg/mark.svg" alt="" />
-                    <p>Stars</p>
-                  </li>
-                </ul>
-              </div>
-            </button>
-            <button class="new">
-              <img src="asset/images/svg/new.svg" alt="" />
-              New
-            </button>
+              </button>
+              <button class="new">
+                <img src="asset/images/svg/new.svg" alt="" />
+                New
+              </button>
+            </div>
           </div>
           <ul class="repos-container">
             <p>Loading...</p>
