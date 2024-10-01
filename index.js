@@ -12,6 +12,9 @@ const createRepo = document.querySelector(".create-repo");
 const repoDropdown = document.querySelector(".repo-dropdown");
 const sort = document.querySelector(".sort");
 const sortDropdown = document.querySelector(".sort-dropdown");
+const closeSort = document.querySelector(".sort-dropdown >.select-title > img");
+const closeLang = document.querySelector(".close-lang");
+const closeType = document.querySelector(".close-type");
 const lang = document.querySelector(".lang-filter");
 const langDropdown = document.querySelector(".language-dropdown");
 const type = document.querySelector(".type");
@@ -26,8 +29,27 @@ let url =
   "https://api.github.com/users/M0hamm0d/repos?sort=created&direction=desc";
 
 sort.addEventListener("click", () => {
-  sortDropdown.classList.toggle("active");
+  if (sort.className === "sort") {
+    // sortDropdown.style.display = "flex";
+    sortDropdown.classList.toggle("active");
+  }
 });
+closeSort.addEventListener("click", () => {
+  if (closeSort.className === "close-sort") {
+    sortDropdown.classList.remove("active");
+  }
+});
+closeLang.addEventListener("click", () => {
+  if (closeLang.className === "close-lang") {
+    langDropdown.classList.remove("active");
+  }
+});
+closeType.addEventListener("click", () => {
+  if (closeType.className === "close-type") {
+    typeDropdown.classList.remove("active");
+  }
+});
+
 type.addEventListener("click", () => {
   typeDropdown.classList.toggle("active");
 });
@@ -174,10 +196,7 @@ async function repoEndPoint() {
     item.addEventListener("click", () => {
       console.log(item);
       if (item.className === "star-drop") {
-        // dropdown[i].style.display = "flex";
-        dropdown[i].style.display === "none"
-          ? (dropdown[i].style.display = "flex")
-          : (dropdown[i].style.display = "none");
+        dropdown[i].classList.toggle("active");
       }
       // dropdown[i].style.display = "flex";
     });

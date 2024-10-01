@@ -352,6 +352,9 @@ header img {
   display: flex;
   gap: 0.5rem;
 }
+.type-sec button {
+  border: none;
+}
 .type,
 .lang-filter,
 .sort,
@@ -359,7 +362,6 @@ header img {
 .search-filter-container .new {
   padding: 7px 16px;
   display: flex;
-  position: relative;
   background-color: #f6f8fa;
   border: 1px solid #d1d9e0;
   border-radius: 6px;
@@ -367,6 +369,11 @@ header img {
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
+}
+.sort-container,
+.lang-filter-container,
+.type-container {
+  position: relative;
 }
 .type:hover,
 .lang-filter:hover,
