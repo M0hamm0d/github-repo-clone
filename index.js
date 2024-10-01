@@ -30,7 +30,8 @@ let url =
 
 sort.addEventListener("click", () => {
   if (sort.className === "sort") {
-    // sortDropdown.style.display = "flex";
+    typeDropdown.classList.remove("active");
+    langDropdown.classList.remove("active");
     sortDropdown.classList.toggle("active");
   }
 });
@@ -52,8 +53,12 @@ closeType.addEventListener("click", () => {
 
 type.addEventListener("click", () => {
   typeDropdown.classList.toggle("active");
+  langDropdown.classList.remove("active");
+  sortDropdown.classList.remove("active");
 });
 lang.addEventListener("click", () => {
+  typeDropdown.classList.remove("active");
+  sortDropdown.classList.remove("active");
   langDropdown.classList.toggle("active");
 });
 createRepo.addEventListener("click", () => {
