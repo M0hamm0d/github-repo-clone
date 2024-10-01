@@ -89,7 +89,7 @@ async function repoEndPoint() {
                     <h3>
                       <a href="#">${item.name}</a>
                     </h3>
-                    <p class="visibility">${item.visibility}</p>
+                    <p class="">${item.visibility}</p>
                   </div>
                   <p class="description">
                     ${item.description === null ? "" : item.description}
@@ -111,11 +111,13 @@ async function repoEndPoint() {
                       <p class="star-text">Star</p>
                     </div>
                     <div class="stars-dropdown">
-                      <img src="asset/images/svg/dropdown.svg" alt="" />
+                      <div class="star-drop">
+                        <img src="asset/images/svg/dropdown.svg" alt="" />
+                      </div>
                       <div class="dropdown">
                         <div class="title">
                           <h4>List</h4>
-                          <img src="asset/images/svg/cancel.svg" alt="" />
+                          <img class="close-modal" src="asset/images/svg/cancel.svg" alt="" />
                         </div>
                         <ul class="select-list">
                           <li>
@@ -140,11 +142,13 @@ async function repoEndPoint() {
     repositoryName.insertAdjacentHTML("beforeend", html);
   });
   const dropdown = document.querySelectorAll(".dropdown");
-  const starsDropdown = document.querySelectorAll(".stars-dropdown");
+  const starsDropdown = document.querySelectorAll(".star-drop");
   const main = document.querySelector(".main");
   const starContainer = document.querySelectorAll(".star-container");
   const starText = document.querySelectorAll(".star-text");
   const starLogo = document.querySelectorAll(".star-logo");
+  const closeModal = document.querySelectorAll(".close-modal");
+
   starContainer.forEach((item, i) => {
     item.addEventListener("click", () => {
       if (starText[i].textContent === "Star") {
@@ -154,16 +158,29 @@ async function repoEndPoint() {
         starText[i].textContent = "Star";
         starLogo[i].src = "asset/images/svg/star.svg";
       }
-      console.log(starLogo[i].src);
+    });
+  });
+
+  closeModal.forEach((item, i) => {
+    item.addEventListener("click", () => {
+      // console.log(item.className === "close-modal");
+      if (item.className === "close-modal") {
+        dropdown[i].style.display = "none";
+      }
     });
   });
 
   starsDropdown.forEach((item, i) => {
     item.addEventListener("click", () => {
-      item.classList.toggle("active");
-      dropdown[i].classList.toggle("active");
+      console.log(item);
+      if (item.className === "star-drop") {
+        // dropdown[i].style.display = "flex";
+        dropdown[i].style.display === "none"
+          ? (dropdown[i].style.display = "flex")
+          : (dropdown[i].style.display = "none");
+      }
+      // dropdown[i].style.display = "flex";
     });
-    //console.log(item);
   });
 
   const programmingLang = document.querySelectorAll(".prog-lang");
