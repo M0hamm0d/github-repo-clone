@@ -6,12 +6,121 @@
     <title>Document</title>
     <link rel="stylesheet" href="asset/styles.css" />
   </head>
-  <body>
+  <body class="body">
     <header>
       <div class="profile-nav-section">
         <div class="nav-section-start">
           <button class="menu-bar">
-            <img src="asset/images/svg/side-bar.svg" alt="" />
+            <div class="menu">
+              <img src="asset/images/svg/side-bar.svg" alt="" />
+            </div>
+            <div class="menu-overlay" style="display: none"></div>
+            <div class="menu-slideout" style="display: none">
+              <div class="menu-header">
+                <div class="menu-logo">
+                  <img src="asset/images/svg/github-logo.svg" alt="" />
+                </div>
+                <div class="close-menu">
+                  <img src="asset/images/svg/cancel.svg" alt="" />
+                </div>
+              </div>
+              <div class="menu-body">
+                <div class="top">
+                  <div class="">
+                    <img src="asset/images/svg/home.svg" alt="" />
+                    <p>Home</p>
+                  </div>
+                  <div class="">
+                    <img src="asset/images/svg/issues.svg" alt="" />
+                    <p>Issues</p>
+                  </div>
+                  <div class="">
+                    <img src="asset/images/svg/pull.svg" alt="" />
+                    <p>Pull requust</p>
+                  </div>
+                  <div class="">
+                    <img src="asset/images/svg/project.svg" alt="" />
+                    <p>Projects</p>
+                  </div>
+                  <div class="">
+                    <img src="asset/images/svg/discussion.svg" alt="" />
+                    <p>Discussion</p>
+                  </div>
+                  <div class="">
+                    <img src="asset/images/svg/codespace.svg" alt="" />
+                    <p>Codespaces</p>
+                  </div>
+                </div>
+                <div class="middle">
+                  <div class="">
+                    <img src="asset/images/svg/explore.svg" alt="" />
+                    <p>Explore</p>
+                  </div>
+                  <div class="">
+                    <img src="asset/images/svg/marketplace.svg" alt="" />
+                    <p>Marketplace</p>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <div class="bottom-header">
+                    <p>Repositories</p>
+                    <img src="asset/images/svg/search.svg" alt="" />
+                  </div>
+                  <div class="bottom-body">
+                    <div class="">
+                      <img src="asset/images/image/avatar.png" alt="" />
+                      <p>M0hamm0d/javaScript-practice</p>
+                    </div>
+                    <div class="">
+                      <img src="asset/images/image/avatar.png" alt="" />
+                      <p>M0hamm0d/twitter-clone</p>
+                    </div>
+                    <div class="">
+                      <img src="asset/images/image/avatar.png" alt="" />
+                      <p>M0hamm0d/github-repo-clone</p>
+                    </div>
+                    <div class="">
+                      <img src="asset/images/image/avatar.png" alt="" />
+                      <p>M0hamm0d/css-tricks-clone</p>
+                    </div>
+                    <div class="">
+                      <img src="asset/images/image/avatar.png" alt="" />
+                      <p>M0hamm0d/github-repository-clone</p>
+                    </div>
+                    <div class="show-more">Show more</div>
+                  </div>
+                </div>
+                <div class="menu-footer">
+                  <p class="copy-right">© 2024 GitHub, Inc.</p>
+                  <ul>
+                    <li>
+                      <a href="#">About</a>
+                    </li>
+                    <li>
+                      <a href="#">Blog</a>
+                    </li>
+                    <li>
+                      <a href="#">Terms</a>
+                    </li>
+                    <li>
+                      <a href="#">Privacy</a>
+                    </li>
+                    <li>
+                      <a href="#">Security</a>
+                    </li>
+                    <li>
+                      <a href="#">Status</a>
+                    </li>
+                    <li>
+                      <a href="#">Do not share my personal information</a>
+                    </li>
+                    <li>
+                      <a href="#">Manage Cookies</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </button>
           <div class="gh-logo">
             <img src="asset/images/svg/github-logo.svg" alt="" />
@@ -196,7 +305,11 @@
           </button>
           <div class="search-filter-container">
             <div class="search-input">
-              <input type="text" placeholder="Find a repository..." />
+              <input
+                type="text"
+                placeholder="Find a repository..."
+                id="find-repo"
+              />
             </div>
             <div class="type-sec">
               <button class="type-container">
@@ -323,6 +436,7 @@
               </button>
             </div>
           </div>
+          <p class="filter-text"></p>
           <ul class="repos-container">
             <p>Loading...</p>
             <!-- <li>
