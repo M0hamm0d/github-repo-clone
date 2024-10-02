@@ -104,6 +104,7 @@ header {
   width: 48px;
   height: 48px;
   justify-content: center;
+  transition: 0.4s;
 }
 .menu-body {
   padding: 8px;
@@ -342,12 +343,86 @@ header img {
 .header .gh-logo svg {
   fill: black;
 }
-.profie-pics {
-  border: 1px solid #d1d9e0;
-}
-.profile-pics img {
+.profile-pics .profile-btn img {
   border: 1px solid #d1d9e0;
   border-radius: 100%;
+}
+.profile-slideout {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  color: black;
+  right: 0px;
+  width: 26%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  box-shadow: 0px 0px 0px 1px #d1d9e080, 0px 6px 12px -3px #25292e0a,
+    0px 6px 18px 0px #25292e1f;
+}
+.profile-btn {
+  background-color: transparent;
+  border: none;
+}
+.profile-slideout .header {
+  padding: 16px 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile-slideout .header .header-name {
+  display: flex;
+  align-items: center;
+}
+.header-name img {
+  border-radius: 100%;
+  margin-right: 8px;
+}
+.close-profile {
+  display: flex;
+}
+.close-profile img {
+  padding: 8px;
+}
+.profile-body {
+  padding: 16px;
+  overflow-y: scroll;
+}
+.profile-body ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.profile-body ul li {
+  padding: 6px 8px;
+  color: #1f2328;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.profile-body ul li a {
+  display: flex;
+  gap: 8px;
+  color: #1f2328;
+  text-decoration: none;
+  align-items: center;
+}
+.profile-body ul .li-line {
+  height: 1px;
+  margin-top: 7px;
+  margin-bottom: 8px;
+  background-color: #d1d9e0b3;
+  padding: 0;
+}
+.free {
+  font-size: 12px;
+  padding: 4px 6px;
+  border: 1px solid #1f2328;
+  border-radius: 999px;
+  font-weight: 500;
 }
 .repository-nav-section {
   display: flex;
@@ -756,7 +831,8 @@ footer {
   .repository-nav-section .list-more {
     display: flex;
   }
-  .menu-slideout {
+  .menu-slideout,
+  .profile-slideout {
     width: 85%;
   }
   .mobile-profile {
@@ -779,9 +855,12 @@ footer {
   .mobile-profile-sec .name {
     display: flex;
   }
-  .nav-section-end {
-    gap: 0;
+  .profile-nav-section {
     justify-content: space-between;
+  }
+  .nav-section-end {
+    gap: 8px;
+    justify-content: flex-end;
   }
   .list-more {
     position: relative;

@@ -30,6 +30,20 @@ const menuSlideOut = document.querySelector(".menu-slideout");
 const menu = document.querySelector(".menu");
 const closeMenu = document.querySelector(".close-menu");
 const body = document.querySelector(".body");
+const profileSlideOut = document.querySelector(".profile-slideout");
+const profileBtn = document.querySelector(".profile-btn");
+const closeProfile = document.querySelector(".close-profile");
+
+profileBtn.addEventListener("click", () => {
+  profileSlideOut.style.display = "flex";
+  menuOverlay.style.display = "flex";
+  body.style.overflow = "hidden";
+});
+closeProfile.addEventListener("click", () => {
+  profileSlideOut.style.display = "none";
+  menuOverlay.style.display = "none";
+  body.style.overflowY = "scroll";
+});
 
 menu.addEventListener("click", () => {
   menuSlideOut.style.display = "flex";
@@ -273,7 +287,7 @@ async function repoEndPoint() {
 
   owner.textContent = data[0].owner.login;
   name.textContent = data[0].owner.login;
-  profilePics.src = data[0].owner.avatar_url;
+  // profilePics.src = data[0].owner.avatar_url;
   profileSec.src = data[0].owner.avatar_url;
   repositoryName.innerHTML = "";
   data.forEach((item) => {
