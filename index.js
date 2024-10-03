@@ -35,12 +35,14 @@ const profileBtn = document.querySelector(".profile-btn");
 const closeProfile = document.querySelector(".close-profile");
 
 profileBtn.addEventListener("click", () => {
-  profileSlideOut.style.display = "flex";
+  //profileSlideOut.style.display = "flex";
+  profileSlideOut.style.right = "0px";
   menuOverlay.style.display = "flex";
   body.style.overflow = "hidden";
 });
 closeProfile.addEventListener("click", () => {
-  profileSlideOut.style.display = "none";
+  // profileSlideOut.style.display = "none";
+  profileSlideOut.style.right = "-335px";
   menuOverlay.style.display = "none";
   body.style.overflowY = "scroll";
 });

@@ -11,6 +11,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 header {
   background-color: #f6f8fa;
@@ -353,7 +354,7 @@ header img {
   bottom: 0;
   background-color: #ffffff;
   color: black;
-  right: 0px;
+  right: -335px;
   width: 26%;
   z-index: 5;
   display: flex;
@@ -362,6 +363,7 @@ header img {
   border-bottom-left-radius: 25px;
   box-shadow: 0px 0px 0px 1px #d1d9e080, 0px 6px 12px -3px #25292e0a,
     0px 6px 18px 0px #25292e1f;
+  transition: 0.5s;
 }
 .profile-btn {
   background-color: transparent;
@@ -402,6 +404,10 @@ header img {
   font-size: 14px;
   display: flex;
   justify-content: space-between;
+}
+.profile-body ul li:hover {
+  background-color: #eff2f5;
+  border-radius: 7px;
 }
 .profile-body ul li a {
   display: flex;
@@ -830,6 +836,11 @@ footer {
   .mobile-profile,
   .repository-nav-section .list-more {
     display: flex;
+  }
+  .body,
+  .main,
+  .body-container {
+    overflow-x: hidden;
   }
   .menu-slideout,
   .profile-slideout {
